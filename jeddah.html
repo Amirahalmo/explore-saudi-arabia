@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>استكشف جدة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>استكشف جدة</h1>
+    <nav>
+      <a href="riyadh.html">الرياض</a>
+      <a href="alula.html">العُلا</a>
+      <a href="jeddah.html">جدة</a>
+    </nav>
+  </header>
+
+  <section class="place">
+    <h2>نافورة الملك فهد</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/King_Fahd_Fountain.jpg" alt="نافورة جدة">
+    <p>أعلى نافورة في العالم، تقع على ساحل البحر الأحمر في جدة.</p>
+  </section>
+
+  <section class="place">
+    <h2>البلد – المنطقة التاريخية</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Al-Balad%2C_Jeddah.jpg" alt="البلد">
+    <p>منطقة تراثية قديمة تحتوي على مباني تاريخية وأسواق شعبية.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 استكشف السعودية</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.place');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

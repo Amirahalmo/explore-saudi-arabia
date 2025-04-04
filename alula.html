@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>استكشف العُلا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>استكشف العُلا</h1>
+    <nav>
+      <a href="riyadh.html">الرياض</a>
+      <a href="alula.html">العُلا</a>
+      <a href="jeddah.html">جدة</a>
+    </nav>
+  </header>
+
+  <section class="place">
+    <h2>مدائن صالح</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Mada%27in_Saleh_1.jpg" alt="مدائن صالح">
+    <p>من أبرز المواقع الأثرية في العُلا، وتعود إلى حضارة الأنباط، وهي موقع تراث عالمي.</p>
+  </section>
+
+  <section class="place">
+    <h2>صخرة الفيل</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Elephant_Rock_Al_Ula.jpg" alt="صخرة الفيل">
+    <p>تُعرف بهذا الاسم لأنها تشبه شكل الفيل، وتعتبر من أشهر المعالم الطبيعية في العُلا.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 استكشف السعودية</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.place');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

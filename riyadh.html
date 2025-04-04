@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>استكشف الرياض</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>استكشف الرياض</h1>
+    <nav>
+      <a href="riyadh.html">الرياض</a>
+      <a href="alula.html">العُلا</a>
+      <a href="jeddah.html">جدة</a>
+    </nav>
+  </header>
+
+  <section class="place">
+    <h2>برج المملكة</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Kingdom_Tower_Riyadh.jpg" alt="برج المملكة">
+    <p>برج المملكة من أشهر معالم الرياض ويحتوي على مراكز تسوق وفندق فاخر.</p>
+  </section>
+
+  <section class="place">
+    <h2>قصر المصمك</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Al_Masmak_Fort.jpg" alt="قصر المصمك">
+    <p>قصر المصمك هو حصن تاريخي لعب دورًا مهمًا في توحيد المملكة العربية السعودية.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 استكشف السعودية</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.place');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
